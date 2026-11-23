@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhehan Hu, a student at Xi’an Jiaotong-Liverpool University, shares projects in computer networking and database applications.">
+  <title>Zhehan Hu — Student projects</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #faf9f6;
+      --ink: #202321;
+      --muted: #545b56;
+      --rule: #c5c9c0;
+      --sans: "Inter", "Segoe UI", Arial, sans-serif;
+      --serif: "Baskervville", Georgia, "Times New Roman", serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 var(--sans); }
+    .page { max-width: 74rem; margin: auto; padding: 0 clamp(1.1rem, 5vw, 4rem); }
+    a { color: inherit; text-underline-offset: .24em; }
+    a:hover, summary:hover { text-decoration: underline; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    .skip { position: absolute; top: .6rem; left: .6rem; padding: .5rem 1rem; background: white; transform: translateY(-160%); }
+    .skip:focus { transform: none; }
+    header, nav, footer { display: flex; align-items: center; }
+    header, footer { justify-content: space-between; gap: .75rem; }
+    header { min-height: 4.5rem; border-bottom: 1px solid var(--ink); }
+    nav { gap: clamp(.9rem, 3vw, 2rem); }
+    header a { text-decoration: none; }
+    .signature { font: bold 1.6rem/1 var(--serif); letter-spacing: -.09em; }
+    .intro { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); padding: clamp(3rem, 7vw, 6.5rem) 0; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: normal; }
+    h1 { font-size: clamp(3.7rem, 7.2vw, 6.6rem); line-height: .98; letter-spacing: -.065em; margin: 0; }
+    .intro-copy p { max-width: 31rem; margin: 1.3rem 0 0; color: var(--muted); font-size: 1.12rem; }
+    figure { margin: 0; padding: 1.65rem clamp(1.25rem, 3vw, 2.25rem); background: #252a27; color: #fafbf6; }
+    figcaption { font: 1.5rem/1.2 var(--serif); }
+    figure p { font-size: .87rem; color: #d6dcd3; margin: .45rem 0 1.15rem; }
+    .measure { margin-top: .75rem; }
+    .reading { display: flex; justify-content: space-between; font-size: .88rem; }
+    .value { font-variant-numeric: tabular-nums; }
+    .track { height: .42rem; margin-top: .28rem; background: #606962; }
+    .fill { display: block; height: 100%; background: #e1e8d8; }
+    .tcp { width: 100%; }
+    .udp { width: 95.5%; }
+    .projects { padding-bottom: 3rem; }
+    .projects h2 { margin: 0; padding: 0 0 .7rem; border-bottom: 2px solid var(--ink); font-size: 1.8rem; letter-spacing: -.03em; }
+    article { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(1rem, 5vw, 5rem); padding: 1.65rem 0 1.9rem; border-bottom: 1px solid var(--rule); }
+    article h3 { font-size: clamp(1.55rem, 2.7vw, 2.05rem); line-height: 1.16; margin: 0; letter-spacing: -.035em; }
+    .tools { font-size: .83rem; color: var(--muted); margin: .45rem 0 0; }
+    article p { margin: 0; }
+    details { margin-top: .7rem; }
+    summary { cursor: pointer; width: fit-content; padding: .2rem 0; font-weight: 600; font-size: .9rem; }
+    details p { margin: .45rem 0 0; padding-left: .8rem; border-left: 2px solid var(--rule); color: var(--muted); }
+    footer { padding: .5rem 0 2rem; color: var(--muted); font-size: .86rem; }
+    @media (max-width: 46rem) {
+      .intro, article { grid-template-columns: minmax(0, 1fr); }
+      .intro { gap: 1.75rem; }
+      article { gap: .8rem; }
+      header { min-height: 3.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="page" id="top">
+    <header>
+      <a class="signature" href="#top" aria-label="Zhehan Hu, home">ZH</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/Zhehan-Hu">GitHub ↗</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="intro" aria-labelledby="name">
+        <div class="intro-copy">
+          <h1 id="name">Zhehan Hu</h1>
+          <p>I study at Xi’an Jiaotong-Liverpool University. My recent projects started with two questions. What happens to a video frame on its way to the screen? And how can I keep track of feedback after I get it?</p>
+        </div>
+        <figure>
+          <figcaption>Frames received in a local video test</figcaption>
+          <p>I sent the same 600-frame clip twice.</p>
+          <div class="measure">
+            <div class="reading"><span>TCP</span><span class="value">600 of 600</span></div>
+            <div class="track" aria-hidden="true"><span class="fill tcp"></span></div>
+          </div>
+          <div class="measure">
+            <div class="reading"><span>UDP</span><span class="value">573 of 600</span></div>
+            <div class="track" aria-hidden="true"><span class="fill udp"></span></div>
+          </div>
+        </figure>
+      </section>
+      <section class="projects" aria-labelledby="projects">
+        <h2 id="projects">Selected projects</h2>
+        <article>
+          <div>
+            <h3>Video over TCP and UDP</h3>
+            <p class="tools">Python · OpenCV · Wireshark</p>
+          </div>
+          <div>
+            <p>I ran a video sender and receiver inside one Ubuntu virtual machine, then watched the clip at the receiving end. Capturing traffic on the loopback interface let me follow the transfer between the two programs.</p>
+            <details>
+              <summary>What the frame counts tell me</summary>
+              <p>The UDP receiver counted 27 fewer video frames than the sender in this run. A video frame can span several datagrams, so those two counters alone cannot tell me how many UDP datagrams were lost.</p>
+            </details>
+          </div>
+        </article>
+        <article>
+          <div>
+            <h3>Feedback-to-Action Tracker</h3>
+            <p class="tools">Flask · PostgreSQL</p>
+          </div>
+          <div>
+            <p>I built a web app that turns assessment comments into tasks. When I open a task, I can trace it back to the feedback that prompted it and see how its status has changed.</p>
+            <details>
+              <summary>How I keep a task’s history</summary>
+              <p>The task record holds its current status. A separate history table records the old status, the new status and the time of each change. That lets the dashboard show what is still open while the task page preserves earlier decisions.</p>
+            </details>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <span>Zhehan Hu</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
